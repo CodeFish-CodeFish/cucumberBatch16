@@ -1,7 +1,7 @@
 Feature: Testing the login functionality for WebOrder website
 
   Scenario: Happy Path(Correct username-Correct Password)
-  When User provides 'guest1@microworks.com','Guest1!' and click Login button
+  When User provides "guest1@microworks.com",'Guest1!' and click Login button
   Then User validates the 'ORDER DETAILS - Weborder'
 
   Scenario: Negative Login(Correct username-Wrong Password)

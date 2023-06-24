@@ -1,11 +1,19 @@
+Feature: Testing the Food Order Functionality of WebOrder
+
+  Background: Food Order same steps
+    Given User provides username and password for successful login
+    When User clicks Group Order Box and Next Button
+    And User provides note 'I LOVE SELENIUM' to invitees box
+    And User provides gmail "Ahmet@gmail.com","mehmet@gmail.com" to InviteList
+
+  Scenario: Testing Happy Path for MyHouse Food Order
+    And User chooses the location 'My House' and validates the address '3137 Laguna Street'
+    And User clicks Create Group Order Button
+    Then User validates the header 'View Group Order' and 'Your group order is now pending' from description
+
+  Scenario: Testing Happy Path for Office Food Order
+    And User chooses the location 'Office' and validates the address '2013 EMPIRE BLVD'
+    And User clicks Create Group Order Button
+    Then User validates the header 'View Group Order' and 'Your group order is now pending' from description
 
 
-  #1-Login successfully weborder page parameterize username and password in feature file
-
-    #2 click the order box and next button
-    #3 send invitees section to "I LOVE SELENIUM"
-    #4 send inviteList "email@gmail.com" and "email2@gmail.com"
-    #5 choose the delivery option "My House" and validate adress(contains) "3137 Laguna"
-    #6 click group order button
-    #7 Validate the header "View Group Order"(think about thread.sleep)
-    #8 Validate the description contains(Your group order is now pending) from description
