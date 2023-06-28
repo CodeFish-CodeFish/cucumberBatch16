@@ -1,3 +1,4 @@
+@apiregression @regression
 Feature:Testing the Google Search Functionality Parameters
 #general description
   Background: navigate to the website same step
@@ -12,6 +13,7 @@ Feature:Testing the Google Search Functionality Parameters
     When User searches for 'Kyrgyz Food in USA'
     Then User validates the result is less than 300000000
 
+  @smoke
   Scenario: Testing Loading Time Search for an item Parameters
     When User searches for 'Turkish Baklava'
     Then User validates the loading time is less than 1.0
